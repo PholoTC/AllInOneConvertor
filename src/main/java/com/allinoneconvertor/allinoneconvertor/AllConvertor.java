@@ -595,7 +595,7 @@ public class AllConvertor extends javax.swing.JFrame {
         if (drpDwnFrom.getSelectedItem().toString().equals("US Dollar")
                 && drpDwnTo.getSelectedItem().toString().equals("ZA Rand")) {
             Total = amount * 16.75;
-            NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("en", "ZAR"));
+            NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale(Locale.US.getCountry()));
             String moneyString = formatter.format(Total);
             JOptionPane.showMessageDialog(this, "Value is " + moneyString);
         } else if (drpDwnFrom.getSelectedItem().toString().equals("US Dollar")
